@@ -6,7 +6,9 @@ var restful = require('node-restful');
 var mongoose = restful.mongoose;
 
 // Schema
-var truckProfileSchema = new mongoose.Schema({
+var truckUserSchema = new mongoose.Schema({
+	lat: Number, 
+	long: Number,
 	truck_name: String, 
 	contact_info: String,
 	cuisine: String, 
@@ -14,4 +16,4 @@ var truckProfileSchema = new mongoose.Schema({
 });
 
 // Return Model
-module.exports = restful.model('TruckProfile', truckProfileSchema);
+module.exports = restful.model('TruckUser', truckUserSchema);

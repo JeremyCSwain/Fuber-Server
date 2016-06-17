@@ -22,6 +22,13 @@ app.use(bodyParser.json());
 // Routes
 app.use('/api', require('./routes/api'));
 
+// User Endpoint
+app.get('/api/users/', function(req, res) {
+  User.findById(req.user, function(err, user) {
+    res.send(user);
+ 	});
+});
+
 // Start Server
 app.listen(3000);
 
