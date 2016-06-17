@@ -7,18 +7,14 @@ var router = express.Router();
 
 // Models
 var User = require('../models/users');
-var TruckLoc = require('../models/truck_loc');
-var TruckProfile = require('../models/truck_profile');
+var TruckUser = require('../models/truck_user');
 
 // Routes
 User.methods(['get', 'put', 'post', 'delete']);
 User.register(router, '/users');
 
-TruckLoc.methods(['get', 'put', 'post', 'delete']);
-TruckLoc.register(router, '/truck_loc');
-
-TruckProfile.methods(['get', 'put', 'post', 'delete']);
-TruckProfile.register(router, '/truck_profile');
+TruckUser.methods(['get', 'put', 'post', 'delete']);
+TruckUser.register(router, '/truck_user');
 
 // Return Router
 module.exports = router;
