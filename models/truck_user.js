@@ -7,12 +7,14 @@ var mongoose = restful.mongoose;
 
 // Schema
 var truckUserSchema = new mongoose.Schema({
+	uid: String,
 	lat: Number, 
 	long: Number,
 	truck_name: String, 
-	contact_info: String,
 	cuisine: String, 
-	website_url: String 
+	contact_info: String,
+	website_url: String, 
+	twitter_handle: String
 });
 
 // Return Model

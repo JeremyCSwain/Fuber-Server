@@ -7,7 +7,7 @@ var mongoose = restful.mongoose;
 
 // Schema
 var userSchema = new mongoose.Schema({
-	firebaseUID: String, 
+	uid: String, 
 	email: String, 
 	username: String,
 	is_truck: Boolean 
